@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="11G63" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="EventHistory" representedClassName="EventHistory" elementID="0.1" versionHashModifier="0.1" syncable="YES">
+        <attribute name="ekEventFullId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ekEventId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isClientDeleted" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isUploaded" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="FriendAgreedStatus" representedClassName="FriendAgreedStatus" syncable="YES">
+        <attribute name="locationAgreed" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timeAgreed" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="friendUser" optional="YES" minCount="1" maxCount="1" deletionRule="No Action" destinationEntity="FriendData" syncable="YES"/>
+        <relationship name="weiJuData" optional="YES" minCount="1" maxCount="1" deletionRule="No Action" destinationEntity="WeiJuData" syncable="YES"/>
+    </entity>
+    <entity name="FriendData" representedClassName="FriendData" syncable="YES">
+        <attribute name="abRecordEmails" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="abRecordFirstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="abRecordID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="abRecordLastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="abRecordName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="abRecordNameNoCase" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hide" optional="YES" attributeType="String" defaultValueString="1" syncable="YES"/>
+        <attribute name="lastMeetingDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="lastMeetingLocation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="messageReadType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userClientId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userEmails" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userImageFileData" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="userImageFileName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userLogin" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userNameSectionTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userNickName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userPassword" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userURN" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="FriendFavoriteLocation" representedClassName="FriendFavoriteLocation" syncable="YES">
+        <attribute name="deleted" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="friendFavoriteLocationId" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="friendLocation" optional="YES" minCount="1" maxCount="1" deletionRule="No Action" destinationEntity="Location" syncable="YES"/>
+        <relationship name="friendUser" optional="YES" minCount="1" maxCount="1" deletionRule="No Action" destinationEntity="FriendData" syncable="YES"/>
+    </entity>
+    <entity name="Location" representedClassName="Location" syncable="YES">
+        <attribute name="locationAddress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="locationClientId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="locationId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="locationName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="locationPhone" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="LoginUser" representedClassName="LoginUser" syncable="YES">
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isAppDefaultLogin" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="isVaild" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="loginName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="MessageStatus" representedClassName="MessageStatus" syncable="YES">
+        <attribute name="messageStatus" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="messageStatusClientId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="receiveUser" optional="YES" minCount="1" maxCount="1" deletionRule="No Action" destinationEntity="FriendData" syncable="YES"/>
+    </entity>
+    <entity name="MessageTemplate" representedClassName="MessageTemplate" syncable="YES">
+        <attribute name="createDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="messageMode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="messageTemplateContent" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="sendUser" optional="YES" minCount="1" maxCount="1" deletionRule="No Action" destinationEntity="FriendData" syncable="YES"/>
+    </entity>
+    <entity name="UserEventHistory" representedClassName="UserEventHistory" syncable="YES">
+        <attribute name="buttonCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="clickTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="isUploaded" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="WeiJuData" representedClassName="WeiJuData" syncable="YES">
+        <attribute name="aggreeStatusDisplay" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ekEventID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="inviteDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="inviteUserIds" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isSharingLocation" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isSharingMyLocation" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="locationAgreedUserIds" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="locationBtnStatus" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="proposeDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="subject" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timeAgreedUserIds" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timeBtnStatus" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="weiJuCell" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="weiJuClientId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="weiJuCurrentStatus" optional="YES" attributeType="Integer 16" syncable="YES"/>
+        <attribute name="weiJuId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="weiJuScope" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="weiJuType" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="inviteLocation" optional="YES" minCount="1" maxCount="1" deletionRule="No Action" destinationEntity="Location" syncable="YES"/>
+        <relationship name="invitor" optional="YES" minCount="1" maxCount="1" deletionRule="No Action" destinationEntity="FriendData" syncable="YES"/>
+        <relationship name="lastMessage" optional="YES" minCount="1" maxCount="1" deletionRule="No Action" destinationEntity="WeiJuMessage" syncable="YES"/>
+        <relationship name="proposeLocation" optional="YES" minCount="1" maxCount="1" deletionRule="No Action" destinationEntity="Location" syncable="YES"/>
+    </entity>
+    <entity name="WeiJuMessage" representedClassName="WeiJuMessage" syncable="YES">
+        <attribute name="isPushMessage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isSendBySelf" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="messageClientId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="messageContent" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="messageContentType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="messageId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="messagePushAlert" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="messageReadStatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="messageRecipients" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="messageSendId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="messageStatusClientIds" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="messageType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="protocolVersion" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sendTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="weiJuClientId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="weiJuId" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="sendUser" optional="YES" minCount="1" maxCount="1" deletionRule="No Action" destinationEntity="FriendData" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="EventHistory" positionX="160" positionY="192" width="128" height="165"/>
+        <element name="FriendAgreedStatus" positionX="160" positionY="192" width="128" height="105"/>
+        <element name="FriendData" positionX="160" positionY="192" width="128" height="360"/>
+        <element name="FriendFavoriteLocation" positionX="160" positionY="192" width="128" height="105"/>
+        <element name="Location" positionX="160" positionY="192" width="128" height="120"/>
+        <element name="LoginUser" positionX="160" positionY="192" width="128" height="150"/>
+        <element name="MessageStatus" positionX="160" positionY="192" width="128" height="105"/>
+        <element name="MessageTemplate" positionX="160" positionY="192" width="128" height="105"/>
+        <element name="UserEventHistory" positionX="160" positionY="192" width="128" height="90"/>
+        <element name="WeiJuData" positionX="160" positionY="192" width="128" height="375"/>
+        <element name="WeiJuMessage" positionX="160" positionY="192" width="128" height="300"/>
+    </elements>
+</model>

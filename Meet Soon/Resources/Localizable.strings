@@ -1,0 +1,50 @@
+/* 
+  Localizable.strings
+  Meet Soon
+
+  Created by Luo Michael on 11/6/12.
+  Copyright (c) 2012 Luo Michael. All rights reserved.
+*/
+//login UI
+"PROGRESS_CREATE"="Creating...";
+"PROGRESS_LOGIN"="Signing in...";
+"PROGRESS_PWD"="Retrieving password";
+"REGISTER_TITLE"="Create an Account";
+"LOGIN_TITLE"="Sign In";
+"PWD_TITLE"="Forget Password";
+
+//title for the weiju list view (will override the tab1_title)
+"WEIJULIST_TITLE" = "Meet Soon";
+
+//title for the friends list view
+"CONTACT_SELECT_TITLE" = "Select Contact(s)";
+
+//generic
+"NEXT" = "Next";
+"SETTINGS" = "Settings";
+
+//No access to push
+"NO_PUSH_TITLE" = "Notice";
+"NO_PUSH_MSG" = "This app has not been given permission to receive push alert messages. The app will function but not be able to alert you when your friends start sharing paths or invite you to share unless you enable push. Please go to iPhone's \"Settings\", \"Notifications\" to enable alert for this app, and restart the app";
+
+//No access to calendar
+"NO_CAL_ACCESS_TITLE" = "Critical Notice!";
+"NO_CAL_ACCESS_MSG" = "You have not granted this app the access to Calendar. The app will not be able to display your Calendar events (for path sharing with your friends) unless you grant the access. Please go to iPhone's \"Settings\", \"Privacy\", \"Calendars\" to grant this app the access, and restart the app";
+
+//No server based cal
+"NO_SERVER_CAL_TITLE" = "Critical Notice!";
+"NO_SERVER_CAL_MSG" = "You don't seem to have set up a server based calendar such as iCloud, Exchange or Google Calendar. Without a server based calendar, you can't add invitees to an event, and hence can't share path with them via this app.\n\nPlease go to iPhone's \"Setting\", \"Mail, Contacts, Calendars\", \"Add Account...\" to set up a server based calendar account.\n\nNote that iCloud and Exchange Calendars are preferred, because Google Calendar doesn't allow users to add/edit invitees directly on iPhones";
+
+//No access to addr
+"NO_ADDR_ACCESS_TITLE" = "Important Notice";
+"NO_ADDR_ACCESS_MSG" = "You have not granted this app the access to Contacts. The app will still function but not be able to display friend picture, registered friends list (and meeting history with them) unless you grant the access. Please go to iPhone's \"Settings\", \"Privacy\", \"Contacts\" to grant this app the access, and restart the app";
+
+//PVC
+//Add invitee
+"ADD_INVITEE_TITLE" = "Tap \"Continue\" to go to the event edit screen and add invitees there";
+"ADD_INVITEE_MSG" = "Note: If you use Google Calendar, iOS does not allow you to add/remove invitees directly from iPhone (need to go to Google Calendar website to edit invitees).\n\niCloud or Exchange Calendar allows you to do that and hence is preferred.";
+
+//referal
+"REFER_TITLE" = "I like this iPhone Calendar utility";
+"REFER_MSG" = "Hi! I am using \"Meet Soon\", a simple but very powerful iPhone utility that integrates with the native Calendar, enabling all in a Calendar event to continuously stream their paths and speeds to one another. No more anxious wondering on how long to wait:-) Download it at ";
+

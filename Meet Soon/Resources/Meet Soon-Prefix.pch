@@ -1,0 +1,24 @@
+//
+// Prefix header for all source files of the 'Meet Soon' target in the 'Meet Soon' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+	#import <UIKit/UIKit.h>
+	#import <Foundation/Foundation.h>
+	#import <CoreData/CoreData.h>
+	#import <QuartzCore/QuartzCore.h>
+	#import <MapKit/MapKit.h>
+	#import <CoreLocation/CoreLocation.h>
+	#import <AudioToolbox/AudioToolbox.h>
+	#import <EventKit/EventKit.h>
+	#import <EventKitUI/EventKitUI.h>
+	#import <AddressBook/AddressBook.h>
+	#import <AddressBookUI/AddressBookUI.h>
+	#import <MessageUI/MessageUI.h>
+#endif
